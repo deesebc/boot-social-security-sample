@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <!DOCTYPE tiles-definitions PUBLIC
+           "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+           "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Templates -->
+	<definition name="layout.basic" template="/WEB-INF/tiles/layout/basic.jsp">
+		<put-attribute name="title" value="Boot Social Security Sample" />
+		<put-attribute name="bodyClass" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/view/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/view/menu.jsp" />
+		<!-- 
+		<put-attribute name="footer" value="/WEB-INF/tiles/view/footer.jsp" /> 
+		<put-attribute name="pageScripts" value="/WEB-INF/tiles/view/scripts/pageScripts.jsp" />
+		<put-attribute name="customScripts" value="" />		
+		-->
+		<put-attribute name="footer" value="" /> 
+		<put-attribute name="pageScripts" value="/WEB-INF/tiles/view/scripts/pageScripts.jsp" />
+		<put-attribute name="customScripts" value="" />	
+	</definition>
+
+	<definition name="layout.error" template="/WEB-INF/tiles/layout/errorBasic.jsp">
+		<put-attribute name="title" value="Error Page" />
+		<put-attribute name="bodyClass" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/view/header.jsp" />
+		<put-attribute name="body" value="" />
+		<!-- 
+		<put-attribute name="footer" value="/WEB-INF/tiles/view/footer.jsp" /> 
+		<put-attribute name="pageScripts" value="/WEB-INF/tiles/view/scripts/pageScripts.jsp" />
+		<put-attribute name="customScripts" value="" />		
+		-->
+		<put-attribute name="footer" value="" /> 
+		<put-attribute name="pageScripts" value="/WEB-INF/tiles/view/scripts/pageScripts.jsp" />
+		<put-attribute name="customScripts" value="" />	       
+	</definition>
+	
+	<definition name="layout.empty" template="/WEB-INF/tiles/layout/emptyBasic.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<!-- Single Pages -->
+	
+	<definition name="site.index" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/pages/index.jsp" />
+	</definition>
+	
+	<definition name="site.events" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/pages/events.jsp" />
+	</definition>
+	
+	<definition name="site.login" extends="layout.basic">
+		<put-attribute name="bodyClass" value="login" />
+		<put-attribute name="body" value="/WEB-INF/pages/login.jsp" />
+	</definition>
+	
+	<definition name="site.403" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/pages/403.jsp" />
+	</definition>
+	
+	<!-- Error pages -->
+	<definition name="site.error" extends="layout.error">
+		<put-attribute name="body" value="/WEB-INF/pages/error.jsp" />
+	</definition>
+</tiles-definitions>
