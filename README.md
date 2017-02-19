@@ -13,6 +13,8 @@ In the application.propertis is include the application configuration for Spring
 
 You need a application Id and Key Secret for Facebook. You can obtain here: https://developers.facebook.com/.
 
+In src/test/resources you have the SQL Schema used  for this example.
+
 ## Important classes
 
 The application uses:
