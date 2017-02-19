@@ -7,14 +7,14 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
   </button>
-  <a class="navbar-brand" href="#">Project name</a>
+  <a class="navbar-brand" href="#">Boot Social Security Sample</a>
 </div>
 <div id="navbar" class="collapse navbar-collapse">
   <ul class="nav navbar-nav">
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="/events">Eventos</a></li>
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="/restricted">Restricted Page</a></li>
     <security:authorize access="isFullyAuthenticated()">
-    	<li><a href="#contact">Hola <security:authentication property="principal.username" /></a></li>
+    	<li><a href="#contact">Hello <security:authentication property="principal.username" /></a></li>
     	<li><a href="/logout">Logout</a></li>
     </security:authorize>
   </ul>

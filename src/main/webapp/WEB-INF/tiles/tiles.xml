@@ -46,8 +46,8 @@
 		<put-attribute name="body" value="/WEB-INF/pages/index.jsp" />
 	</definition>
 	
-	<definition name="site.events" extends="layout.basic">
-		<put-attribute name="body" value="/WEB-INF/pages/events.jsp" />
+	<definition name="site.restricted" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/pages/restricted.jsp" />
 	</definition>
 	
 	<definition name="site.login" extends="layout.basic">

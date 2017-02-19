@@ -5,10 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class EventsController {
+public class RestrictedController {
 
-	@GetMapping( value = "/events" )
+	@GetMapping( value = "/restricted" )
 	public String home( final Model model ) {
-		return "site.events";
+		return "site.restricted";
 	}
 }
