@@ -25,8 +25,6 @@ public class CustomUserDetailsServiceImpl implements UserDetailsService {
 		if( user == null ) {
 			throw new UsernameNotFoundException( "No user present with username/email: " + username );
 		} else {
-			// List<String> userRoles = userTypeDao.findRoleByUserName( username );
-			// UserDto userDto = UserToDto.INSTANCE.convert( user );
 			List<String> userRoles = new ArrayList<>();
 			userRoles.add( "USER" );
 			return new CustomUserDetails( user, userRoles );
